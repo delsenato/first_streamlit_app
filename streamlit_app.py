@@ -69,9 +69,10 @@ add_my_fruit = streamlit.text_input('What fruit would you like to add?','Kiwi')
 streamlit.write('The user entered ', add_my_fruit)
 import requests
 my_cur1 = my_cnx.cursor()
-my_cur.execute("insert into PUBLIC.FRUIT_LOAD_LIST values ('" add_my_fruit ' ")"")
-my_cur = my_cnx.cursor()
-my_cur.execute("SELECT * from fruit_load_list")
+#my_cur.execute("SELECT * from fruit_load_list")
+my_cur1.execute("insert into PUBLIC.FRUIT_LOAD_LIST values (" add_my_fruit  ")"")
+my_cur3 = my_cnx.cursor()
+my_cur3.execute("SELECT * from fruit_load_list")
 
 
 insert into PC_RIVERY_DB.PUBLIC.FRUIT_LOAD_LIST

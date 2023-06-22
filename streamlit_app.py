@@ -75,7 +75,7 @@ my_cur3 = my_cnx.cursor()
 my_cur3.execute("SELECT * from fruit_load_list")
 
 
-insert into PC_RIVERY_DB.PUBLIC.FRUIT_LOAD_LIST
-values ('banana')
+#insert into PC_RIVERY_DB.PUBLIC.FRUIT_LOAD_LIST
+#values ('banana')
 #fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
 

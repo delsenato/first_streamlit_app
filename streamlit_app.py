@@ -100,3 +100,4 @@ my_cur3.execute("SELECT * from fruit_load_list")
 #values ('banana')
 #fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
 
+streamlit.stop()

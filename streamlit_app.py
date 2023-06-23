@@ -103,6 +103,22 @@ if streamlit.button('Get Fruit Load List'):
 #my_cur3.execute("SELECT * from fruit_load_list")
 
 
+#Allow the end user to add a fruit to the table
+def insert_row_snowflake(new_fruit):
+        with my_cnx.cursor() as my_cur:
+            #my_cur.execute("Insert into fruit_load_list values ('from streamlit')")
+            my_cur.execute("Insert into fruit_load_list values" + f"('{add_my_fruit}')") 
+            return "Thanks for adding + new_fruit
+
+add_my_fruit = steamlit.text.input('What fruit would you like to add?')
+if streamlit.button('Add a Fruit to the list'):
+    my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
+    back_from_function = insert_row_snowflake(add_my_fruit)
+    streamlit.text(back_from_function)
+
+
+
+
 #insert into PC_RIVERY_DB.PUBLIC.FRUIT_LOAD_LIST
 #values ('banana')
 #fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
